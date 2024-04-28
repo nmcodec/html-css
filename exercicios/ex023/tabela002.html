@@ -19,10 +19,25 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
+
+        tbody > tr:nth-child(even) { /* também pode ser usado a expressão "2n" no lugar do "even" para efeito zebrado */
+            background-color: lightgray;
+        }
+        /* 
+        "even" serve para identificar linhas pares
+        "odd" serve para identificar linhas ímpares
+         */
 
         td.numero {
             text-align: right;
@@ -34,6 +49,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION (legenda)
             THEAD
                 TR, TD, TH
             TBODY
@@ -42,10 +58,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- a propriedade "scope" define o escopo da tabela e ajuda nos mecanismos de busca-->
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,7 +177,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="numero"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
