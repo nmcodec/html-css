@@ -33,14 +33,20 @@
         </caption>
         <thead>
             <tr>
-                <th>Grupos</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th> <!-- o scope de Filmes é um grupo de colunas -->
             </tr>
         </thead>
+        <tfoot> <!-- esse rodapé foi criado apenas para explicar o scope de Total -->
+            <tr>
+                <th colspan="4" scope="row">Total</th> <!-- mesmo mesclado, a célula Total tem um scope de linha simples, porque só possui um dado relativo -->
+                <td>1000</td>
+            </tr>
+        </tfoot>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th rowspan="3" scope="rowgroup">Mulheres</th> <!-- o scope de Mulheres é um grupo de linhas -->
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -59,7 +65,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th rowspan="3" scope="rowgroup">Homens</th>
                 <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>
