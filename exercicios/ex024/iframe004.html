@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus ad sunt explicabo dolores maxime quod pariatur! Ex corporis eos magni, eius dolor quos reprehenderit maiores eaque, totam accusantium, quo non.</p>
+    <iframe src="paginas-extras/pag004.html" frameborder="0" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compatível com isso...
+    </iframe>
+    <!-- o atributo "sandbox" protege o iframe contra tentativas de captura de dados 
+
+    propriedades desse atributo:
+
+    sandbox = bloqueia qualquer tentativa de captura de dados
+    allow-same-origin = permitir carregamento da mesma origem (pasta)
+    allow-forms = permitir formulários
+    allow-scripts = permitir scripts
+
+    -->
+    <!-- o atributo "referrerpolicy" (política de referência) serve para limitar a captura de dados dentro do iframe
+-->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat maiores provident consequatur perspiciatis, reprehenderit earum dolore facilis quasi. Fugit possimus accusantium explicabo maiores architecto! Dolore dolores a libero rem dignissimos!</p>
+</body>
+</html>
