@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+        <!-- o atributo value deixa uma cor por padrão -->
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nível" id="inivel" min="1" max="5" value="3">
+        </p>
+        <!-- por padrão, o controle vai de 0 a 100, podendo ajustar os valores com os atributos "min" e "max", além do valor já estabelecido em "value" -->
+
+        <p>
+            <label for="ifoto">Foto do perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+        <!-- para carregar arquivos, sempre usar o formulário no método "post" -->
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
